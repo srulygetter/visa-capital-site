@@ -3,121 +3,323 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Visa Capital - MCA Funding Solutions</title>
+<title>Visa Capital - Business Funding Solutions</title>
 <style>
-/* Reset */
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color:#f5f7fa; color:#0b2340; line-height:1.6; }
-header { background:#0b2340; color:#fff; padding:40px 20px; text-align:center; }
-header h1 { font-size:2.5rem; margin-bottom:10px; }
-header p { font-size:1.2rem; }
-nav { margin-top:20px; }
-nav a { color:#f4b400; margin:0 10px; text-decoration:none; font-weight:bold; }
-.hero { padding:60px 20px; text-align:center; background-color:#fff; }
-.hero h2 { font-size:2.2rem; margin-bottom:15px; }
-.hero p { font-size:1.1rem; margin-bottom:20px; }
-.btn-primary { display:inline-block; padding:12px 30px; background-color:#f4b400; color:#0b2340; border-radius:6px; text-decoration:none; font-weight:bold; }
-.section { padding:60px 20px; text-align:center; }
-.card { background:#fff; border-radius:8px; padding:30px; margin:20px auto; box-shadow:0 4px 8px rgba(0,0,0,0.1); max-width:800px; }
-.card h3 { margin-bottom:10px; font-size:1.6rem; color:#0b2340; }
-.card p { margin-bottom:10px; color:#333; }
-.features { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
-.feature { flex:1 1 250px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
-.feature h4 { margin-bottom:10px; color:#0b2340; font-size:1.4rem; }
-.feature p { color:#333; }
-footer { background:#0b2340; color:#fff; padding:30px 20px; text-align:center; }
-footer p, footer a { color:#fff; }
-@media (max-width:768px) {
-  .features { flex-direction:column; }
+/* Basic reset */
+*{margin:0;padding:0;box-sizing:border-box;}
+body{
+  font-family:'Segoe UI', Tahoma, sans-serif;
+  background-color:#f5f7fa;
+  color:#0b2340;
+  line-height:1.6;
+}
+a{color:#0074d9;text-decoration:none;}
+header{
+  background:#0b2340;
+  color:#fff;
+  padding:30px 20px;
+  text-align:center;
+}
+header h1{font-size:2.5rem;margin-bottom:10px;}
+header nav a{
+  margin:0 15px;
+  color:#f4b400;
+  font-weight:600;
+}
+.hero{
+  padding:80px 20px;
+  text-align:center;
+  background:#fff;
+}
+.hero h2{
+  font-size:2.5rem;
+  margin-bottom:15px;
+}
+.hero p{
+  font-size:1.2rem;
+  margin-bottom:25px;
+  max-width:700px;
+  margin-left:auto;
+  margin-right:auto;
+}
+.btn{
+  display:inline-block;
+  padding:14px 32px;
+  border-radius:6px;
+  background:#f4b400;
+  color:#0b2340;
+  font-weight:700;
+  transition:background 0.2s ease;
+}
+.btn:hover{background:#dba800;}
+.section{
+  padding:60px 20px;
+  text-align:center;
+}
+/* Stats section */
+.stats{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+  background:#fff;
+  padding:60px 20px;
+}
+.stat{
+  flex:1 1 250px;
+  background:#fefefe;
+  border-radius:8px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.08);
+  padding:30px;
+}
+.stat h3{
+  font-size:2rem;
+  margin-bottom:10px;
+  color:#f4b400;
+}
+.stat p{
+  font-size:1rem;
+  color:#333;
+}
+/* Solutions cards */
+.solutions{
+  background:#fefefe;
+  padding:60px 20px;
+}
+.solution-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.solution{
+  flex:1 1 280px;
+  background:#fff;
+  border-radius:8px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.08);
+  padding:25px;
+  text-align:left;
+}
+.solution h4{
+  margin-bottom:10px;
+  font-size:1.4rem;
+  color:#0b2340;
+}
+.solution ul{
+  margin-left:20px;
+  list-style:disc;
+  color:#333;
+}
+.solution ul li{margin-bottom:6px;}
+/* How it works */
+.how-it-works{
+  background:#f5f7fa;
+  padding:60px 20px;
+}
+.steps{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.step{
+  flex:1 1 280px;
+  background:#fff;
+  border-radius:8px;
+  padding:25px;
+  box-shadow:0 4px 8px rgba(0,0,0,0.08);
+}
+.step h3{
+  font-size:1.6rem;
+  margin-bottom:10px;
+  color:#0b2340;
+}
+.step p{color:#333;}
+/* Why Us */
+.why-us{
+  background:#fff;
+  padding:60px 20px;
+}
+.why-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:30px;
+}
+.why{
+  flex:1 1 250px;
+  padding:25px;
+  border-radius:8px;
+  background:#f5f7fa;
+  box-shadow:0 4px 8px rgba(0,0,0,0.06);
+}
+.why h4{
+  font-size:1.4rem;
+  margin-bottom:8px;
+  color:#0b2340;
+}
+/* Requirements */
+.requirements{
+  background:#fefefe;
+  padding:60px 20px;
+}
+.requirements ul{
+  margin-left:20px;
+  list-style:disc;
+  color:#333;
+  max-width:600px;
+  margin:auto;
+  text-align:left;
+}
+.requirements h2{margin-bottom:15px;}
+/* Contact */
+.contact{
+  background:#0b2340;
+  color:#fff;
+  padding:60px 20px;
+}
+.contact p{margin-bottom:15px;}
+.contact a.btn{
+  background:#f4b400;
+  color:#0b2340;
+}
+/* Footer */
+footer{
+  background:#0b2340;
+  color:#fff;
+  padding:30px 20px;
+  text-align:center;
+}
+@media(max-width:768px){
+  .stats, .solution-grid, .steps, .why-grid{flex-direction:column;}
+  .stat, .solution, .step, .why{flex:1 1 100%;}
 }
 </style>
 </head>
 <body>
 <header>
-<h1>Visa Capital</h1>
-<p>Flexible Merchant Cash Advance and Financing Solutions</p>
-<nav>
-<a href="#solutions">Solutions</a>
-<a href="#whyus">Why Choose Us</a>
-<a href="#industries">Industries</a>
-<a href="#contact">Contact</a>
-</nav>
+  <h1>Visa Capital</h1>
+  <p>Your trusted partner for flexible business funding solutions</p>
+  <nav>
+    <a href="#solutions">Solutions</a>
+    <a href="#how">How it Works</a>
+    <a href="#why">Why Us</a>
+    <a href="#requirements">Requirements</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 <section class="hero">
-<h2>Get the Funding Your Business Needs Today</h2>
-<p>Visa Capital provides fast, flexible financing options tailored to your business. Whether you need a merchant cash advance, short‑term loan, or line of credit, our experts are here to help.</p>
-<a href="#contact" class="btn-primary">Apply Now</a>
+  <h2>Business Funding up to $500K — Built for You</h2>
+  <p>Apply in minutes and receive funds as soon as the same day. Whether you need to smooth cash flow, purchase equipment or grow your business, Visa Capital has a financing solution to help you move forward.</p>
+  <a href="#contact" class="btn">Get Started</a>
 </section>
-<section id="solutions" class="section">
-<h2>Financing Solutions</h2>
-<div class="features">
-<div class="feature">
-<h4>Merchant Cash Advance</h4>
-<p>Receive upfront funding based on future credit card sales with flexible repayment through a percentage of your daily transactions.</p>
-</div>
-<div class="feature">
-<h4>Business Loans</h4>
-<p>Access short‑ or long‑term loans with competitive rates and customizable terms to finance expansion, equipment, or working capital.</p>
-</div>
-<div class="feature">
-<h4>Lines of Credit</h4>
-<p>Get flexible access to capital up to your approved limit, draw funds when needed, and pay interest only on what you use.</p>
-</div>
-<div class="feature">
-<h4>Invoice & Equipment Financing</h4>
-<p>Turn unpaid invoices or equipment purchases into cash flow to keep your business running smoothly.</p>
-</div>
-<div class="feature">
-<h4>SBA Loans</h4>
-<p>Low‑interest Small Business Administration (SBA) loans for larger projects, with expert guidance on the application process.</p>
-</div>
-</div>
+<section class="stats">
+  <div class="stat">
+    <h3>500+</h3>
+    <p>Businesses Funded</p>
+  </div>
+  <div class="stat">
+    <h3>$50M+</h3>
+    <p>Capital Delivered</p>
+  </div>
+  <div class="stat">
+    <h3>4.8/5</h3>
+    <p>Customer Rating</p>
+  </div>
 </section>
-<section id="whyus" class="section">
-<h2>Why Choose Visa Capital?</h2>
-<div class="card">
-<h3>Fast Approvals & Funding</h3>
-<p>Simple application and approval process. Receive funding in as little as 24 hours.</p>
-</div>
-<div class="card">
-<h3>Flexible Terms</h3>
-<p>Repayment structures that align with your cash flow, not rigid monthly payments.</p>
-</div>
-<div class="card">
-<h3>Expert Support</h3>
-<p>Experienced funding advisors guide you through every step to ensure you get the right solution.</p>
-</div>
+<section id="solutions" class="solutions section">
+  <h2>Financing Solutions</h2>
+  <div class="solution-grid">
+    <div class="solution">
+      <h4>Merchant Cash Advance</h4>
+      <ul>
+        <li>Receive up to $600K based on future sales</li>
+        <li>Flexible remittances tied to your revenue</li>
+        <li>Fast approvals and funding</li>
+      </ul>
+    </div>
+    <div class="solution">
+      <h4>Business Line of Credit</h4>
+      <ul>
+        <li>Credit limits from $10K–$200K</li>
+        <li>Only pay for what you use</li>
+        <li>Repayment terms up to 24 months</li>
+      </ul>
+    </div>
+    <div class="solution">
+      <h4>Term Loans</h4>
+      <ul>
+        <li>Borrow $10K–$400K</li>
+        <li>Repayment terms up to 24 months</li>
+        <li>Great for larger investments</li>
+      </ul>
+    </div>
+    <div class="solution">
+      <h4>Equipment Financing</h4>
+      <ul>
+        <li>Finance or lease equipment up to $150K</li>
+        <li>Keep cash for other needs</li>
+        <li>Flexible end-of-term options</li>
+      </ul>
+    </div>
+  </div>
 </section>
-<section id="industries" class="section">
-<h2>Industries We Serve</h2>
-<div class="features">
-<div class="feature">
-<h4>Retail</h4>
-<p>Keep inventory stocked and manage seasonal swings with our tailored financing.</p>
-</div>
-<div class="feature">
-<h4>Restaurants</h4>
-<p>Upgrade equipment, expand seating, or smooth cash flow during slow periods.</p>
-</div>
-<div class="feature">
-<h4>Healthcare</h4>
-<p>Finance equipment and day‑to‑day operating costs for medical and dental practices.</p>
-</div>
-<div class="feature">
-<h4>E‑Commerce</h4>
-<p>Scale your online store with capital for marketing, inventory, and logistics.</p>
-</div>
-</div>
+<section id="how" class="how-it-works section">
+  <h2>How It Works</h2>
+  <div class="steps">
+    <div class="step">
+      <h3>Step 1: Apply</h3>
+      <p>Complete our simple online application in just minutes—no lengthy paperwork required.</p>
+    </div>
+    <div class="step">
+      <h3>Step 2: Get a Decision</h3>
+      <p>Our funding specialists review your information and help you choose the right option.</p>
+    </div>
+    <div class="step">
+      <h3>Step 3: Receive Your Funds</h3>
+      <p>Once approved, funds can be deposited in your account in as little as 24 hours.</p>
+    </div>
+  </div>
 </section>
-<section id="contact" class="section">
-<h2>Contact Us</h2>
-<p>Ready to get started? Connect with our funding specialists today.</p>
-<p>Email us at <a href="mailto:support@visacap.com">support@visacap.com</a> or fill out our brief application form.</p>
-<a href="mailto:support@visacap.com" class="btn-primary">Get In Touch</a>
+<section id="why" class="why-us section">
+  <h2>Why Choose Visa Capital?</h2>
+  <div class="why-grid">
+    <div class="why">
+      <h4>Fast & Easy Process</h4>
+      <p>Our streamlined application and quick decision process get you the capital you need without hassle.</p>
+    </div>
+    <div class="why">
+      <h4>Flexible Terms</h4>
+      <p>Choose payment structures that work with your cash flow and business needs.</p>
+    </div>
+    <div class="why">
+      <h4>No Hard Credit Pull</h4>
+      <p>Check your eligibility without impacting your personal credit score.</p>
+    </div>
+    <div class="why">
+      <h4>Personalized Support</h4>
+      <p>Our expert funding advisors guide you every step of the way.</p>
+    </div>
+  </div>
+</section>
+<section id="requirements" class="requirements section">
+  <h2>Minimum Requirements</h2>
+  <ul>
+    <li>At least 6 months in business</li>
+    <li>Annual revenue of $100K or more</li>
+    <li>Active business checking account</li>
+    <li>FICO® score of 625 or higher</li>
+  </ul>
+</section>
+<section id="contact" class="contact section">
+  <h2>Get In Touch</h2>
+  <p>Ready to explore your financing options? Our team is here to help.</p>
+  <p>Email us at <a href="mailto:support@visacap.com" style="color:#f4b400;">support@visacap.com</a></p>
+  <a href="mailto:support@visacap.com" class="btn">Contact Us</a>
 </section>
 <footer>
-<p>&copy; 2026 Visa Capital. All rights reserved.</p>
-<p><a href="mailto:support@visacap.com">support@visacap.com</a></p>
+  <p>&copy; 2026 Visa Capital. All rights reserved.</p>
+  <p><a href="mailto:support@visacap.com" style="color:#f4b400;">support@visacap.com</a></p>
 </footer>
 </body>
 </html>
