@@ -1,382 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visa Capital - MCA Funding Solutions</title>
-    <style>
-        /* Reset and base styles */
-        body, h1, h2, h3, p, ul {
-            margin: 0;
-            padding: 0;
-        }
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        a {
-            color: #0056b3;
-            text-decoration: none;
-        }
-        header {
-            background: #0b2340;
-            color: #fff;
-            padding: 20px 0;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1000px;
-            margin: auto;
-            padding: 0 20px;
-        }
-        header h1 {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-        }
-        nav li {
-            margin-left: 20px;
-        }
-        nav a {
-            color: #fff;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #f4b400;
-        }
-        /* Hero section */
-        .hero {
-            background: linear-gradient(135deg, #0b2340 0%, #163b5c 100%);
-            color: #fff;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        .hero p {
-            font-size: 18px;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            margin: 10px;
-            border: none;
-            border-radius: 4px;
-            background: #f4b400;
-            color: #0b2340;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.3s, color 0.3s;
-        }
-        .btn:hover {
-            background: #d89a00;
-        }
-        /* Sections */
-        .container-section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
-        .section-title {
-            font-size: 28px;
-            margin-bottom: 20px;
-            color: #0b2340;
-            text-align: center;
-        }
-        /* Features */
-        .features {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .feature {
-            flex: 1 1 200px;
-            margin: 15px;
-            padding: 20px;
-            background: #f8f8f8;
-            border-radius: 6px;
-            text-align: center;
-        }
-        .feature h3 {
-            margin-bottom: 10px;
-            color: #0b2340;
-        }
-        .feature p {
-            font-size: 14px;
-        }
-        /* Financing options */
-        .financing-options {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .option-card {
-            flex: 1 1 300px;
-            background: #fff;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            margin: 10px;
-            padding: 20px;
-            text-align: left;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        .option-card:hover {
-            transform: translateY(-5px);
-        }
-        .option-card h3 {
-            color: #0b2340;
-            margin-bottom: 10px;
-        }
-        .option-card p {
-            font-size: 14px;
-            margin-bottom: 10px;
-            min-height: 60px;
-        }
-        .option-card a {
-            color: #f4b400;
-            font-weight: bold;
-        }
-        /* Why choose us */
-        .why-choose {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        .why-item {
-            flex: 1 1 200px;
-            margin: 10px;
-            padding: 20px;
-            background: #f0f4f8;
-            border-radius: 6px;
-            text-align: center;
-        }
-        .why-item h4 {
-            color: #0b2340;
-            margin-bottom: 10px;
-        }
-        /* Industries */
-        .industries ul {
-            columns: 2;
-            list-style: none;
-            padding: 0;
-        }
-        .industries li {
-            margin-bottom: 6px;
-        }
-        /* Testimonials */
-        .testimonials {
-            background: #f8f8f8;
-            padding: 40px 20px;
-        }
-        .testimonial {
-            margin: 20px 0;
-            font-style: italic;
-            color: #555;
-        }
-        .testimonial strong {
-            display: block;
-            margin-top: 5px;
-            font-style: normal;
-            color: #0b2340;
-        }
-        /* Contact section */
-        .contact {
-            text-align: center;
-            padding: 40px 20px;
-            background: #0b2340;
-            color: #fff;
-        }
-        .contact h3 {
-            margin-bottom: 10px;
-            font-size: 24px;
-        }
-        .contact p {
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
-        /* Footer */
-        footer {
-            background: #031120;
-            color: #ccc;
-            padding: 20px;
-            text-align: center;
-            font-size: 14px;
-        }
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .features, .financing-options, .why-choose {
-                flex-direction: column;
-                align-items: center;
-            }
-            nav ul {
-                flex-direction: column;
-                text-align: center;
-            }
-            nav li {
-                margin: 10px 0;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Visa Capital - MCA Funding Solutions</title>
+<style>
+/* Reset */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', Tahoma, sans-serif; background-color:#f5f7fa; color:#0b2340; line-height:1.6; }
+header { background:#0b2340; color:#fff; padding:40px 20px; text-align:center; }
+header h1 { font-size:2.5rem; margin-bottom:10px; }
+header p { font-size:1.2rem; }
+nav { margin-top:20px; }
+nav a { color:#f4b400; margin:0 10px; text-decoration:none; font-weight:bold; }
+.hero { padding:60px 20px; text-align:center; background-color:#fff; }
+.hero h2 { font-size:2.2rem; margin-bottom:15px; }
+.hero p { font-size:1.1rem; margin-bottom:20px; }
+.btn-primary { display:inline-block; padding:12px 30px; background-color:#f4b400; color:#0b2340; border-radius:6px; text-decoration:none; font-weight:bold; }
+.section { padding:60px 20px; text-align:center; }
+.card { background:#fff; border-radius:8px; padding:30px; margin:20px auto; box-shadow:0 4px 8px rgba(0,0,0,0.1); max-width:800px; }
+.card h3 { margin-bottom:10px; font-size:1.6rem; color:#0b2340; }
+.card p { margin-bottom:10px; color:#333; }
+.features { display:flex; flex-wrap:wrap; justify-content:center; gap:20px; }
+.feature { flex:1 1 250px; background:#fff; border-radius:8px; padding:20px; box-shadow:0 4px 6px rgba(0,0,0,0.1); }
+.feature h4 { margin-bottom:10px; color:#0b2340; font-size:1.4rem; }
+.feature p { color:#333; }
+footer { background:#0b2340; color:#fff; padding:30px 20px; text-align:center; }
+footer p, footer a { color:#fff; }
+@media (max-width:768px) {
+  .features { flex-direction:column; }
+}
+</style>
 </head>
 <body>
-
 <header>
-    <div class="container">
-        <h1>Visa Capital</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#whychoose">Why Choose Us</a></li>
-                <li><a href="#industries">Industries</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
+<h1>Visa Capital</h1>
+<p>Flexible Merchant Cash Advance and Financing Solutions</p>
+<nav>
+<a href="#solutions">Solutions</a>
+<a href="#whyus">Why Choose Us</a>
+<a href="#industries">Industries</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
-
-<section class="hero" id="home">
-    <h2>Funding Today, Growth Tomorrow</h2>
-    <p>Visa Capital provides reliable, flexible funding solutions tailored to your business needs. Let us help you unlock the capital you need to thrive.</p>
-    <a href="#contact" class="btn">Get Funded Now</a>
-    <a href="#solutions" class="btn" style="background:#fff;color:#0b2340;">See Financing Options</a>
+<section class="hero">
+<h2>Get the Funding Your Business Needs Today</h2>
+<p>Visa Capital provides fast, flexible financing options tailored to your business. Whether you need a merchant cash advance, short‑term loan, or line of credit, our experts are here to help.</p>
+<a href="#contact" class="btn-primary">Apply Now</a>
 </section>
-
-<section class="container-section">
-    <h2 class="section-title">Fast, Flexible, Reliable</h2>
-    <div class="features">
-        <div class="feature">
-            <h3>Fast Approval</h3>
-            <p>Receive funding decisions quickly and get your capital as soon as you need it.</p>
-        </div>
-        <div class="feature">
-            <h3>Flexible Terms</h3>
-            <p>Customized financing options that match your cash flow and growth plans.</p>
-        </div>
-        <div class="feature">
-            <h3>Multiple Options</h3>
-            <p>From MCA to loans and lines of credit, we have financing solutions for every need.</p>
-        </div>
-    </div>
+<section id="solutions" class="section">
+<h2>Financing Solutions</h2>
+<div class="features">
+<div class="feature">
+<h4>Merchant Cash Advance</h4>
+<p>Receive upfront funding based on future credit card sales with flexible repayment through a percentage of your daily transactions.</p>
+</div>
+<div class="feature">
+<h4>Business Loans</h4>
+<p>Access short‑ or long‑term loans with competitive rates and customizable terms to finance expansion, equipment, or working capital.</p>
+</div>
+<div class="feature">
+<h4>Lines of Credit</h4>
+<p>Get flexible access to capital up to your approved limit, draw funds when needed, and pay interest only on what you use.</p>
+</div>
+<div class="feature">
+<h4>Invoice & Equipment Financing</h4>
+<p>Turn unpaid invoices or equipment purchases into cash flow to keep your business running smoothly.</p>
+</div>
+<div class="feature">
+<h4>SBA Loans</h4>
+<p>Low‑interest Small Business Administration (SBA) loans for larger projects, with expert guidance on the application process.</p>
+</div>
+</div>
 </section>
-
-<section class="container-section" id="solutions">
-    <h2 class="section-title">Our Financing Solutions</h2>
-    <div class="financing-options">
-        <div class="option-card">
-            <h3>Merchant Cash Advance</h3>
-            <p>Fast working capital based on your future credit card sales.</p>
-            <a href="#contact">Learn More</a>
-        </div>
-        <div class="option-card">
-            <h3>Business Loans</h3>
-            <p>Term loans and lines of credit with affordable rates and flexible repayment options.</p>
-            <a href="#contact">Learn More</a>
-        </div>
-        <div class="option-card">
-            <h3>Business Line of Credit</h3>
-            <p>Flexible revolving credit to use whenever you need it most.</p>
-            <a href="#contact">Learn More</a>
-        </div>
-        <div class="option-card">
-            <h3>Invoice Financing</h3>
-            <p>Get paid now for your outstanding invoices and improve your cash flow.</p>
-            <a href="#contact">Learn More</a>
-        </div>
-        <div class="option-card">
-            <h3>Equipment Financing</h3>
-            <p>Finance the equipment you need to run and grow your business.</p>
-            <a href="#contact">Learn More</a>
-        </div>
-        <div class="option-card">
-            <h3>SBA Loans</h3>
-            <p>Government-backed loans with low rates and long terms.</p>
-            <a href="#contact">Learn More</a>
-        </div>
-    </div>
+<section id="whyus" class="section">
+<h2>Why Choose Visa Capital?</h2>
+<div class="card">
+<h3>Fast Approvals & Funding</h3>
+<p>Simple application and approval process. Receive funding in as little as 24 hours.</p>
+</div>
+<div class="card">
+<h3>Flexible Terms</h3>
+<p>Repayment structures that align with your cash flow, not rigid monthly payments.</p>
+</div>
+<div class="card">
+<h3>Expert Support</h3>
+<p>Experienced funding advisors guide you through every step to ensure you get the right solution.</p>
+</div>
 </section>
-
-<section class="container-section" id="whychoose">
-    <h2 class="section-title">Why Choose Visa Capital?</h2>
-    <div class="why-choose">
-        <div class="why-item">
-            <h4>Fast Funding</h4>
-            <p>As fast as 24 hours in many cases.</p>
-        </div>
-        <div class="why-item">
-            <h4>Easy Process</h4>
-            <p>Simple application and quick decisions.</p>
-        </div>
-        <div class="why-item">
-            <h4>No Collateral</h4>
-            <p>Unsecured funding options available.</p>
-        </div>
-        <div class="why-item">
-            <h4>All Credit Types</h4>
-            <p>We work with all credit profiles.</p>
-        </div>
-        <div class="why-item">
-            <h4>Expert Support</h4>
-            <p>Personalized support every step of the way.</p>
-        </div>
-    </div>
+<section id="industries" class="section">
+<h2>Industries We Serve</h2>
+<div class="features">
+<div class="feature">
+<h4>Retail</h4>
+<p>Keep inventory stocked and manage seasonal swings with our tailored financing.</p>
+</div>
+<div class="feature">
+<h4>Restaurants</h4>
+<p>Upgrade equipment, expand seating, or smooth cash flow during slow periods.</p>
+</div>
+<div class="feature">
+<h4>Healthcare</h4>
+<p>Finance equipment and day‑to‑day operating costs for medical and dental practices.</p>
+</div>
+<div class="feature">
+<h4>E‑Commerce</h4>
+<p>Scale your online store with capital for marketing, inventory, and logistics.</p>
+</div>
+</div>
 </section>
-
-<section class="container-section industries" id="industries">
-    <h2 class="section-title">Industries We Serve</h2>
-    <p>We provide financing for a wide range of industries, including but not limited to:</p>
-    <ul>
-        <li>Retail & E-Commerce</li>
-        <li>Restaurants & Food Services</li>
-        <li>Healthcare & Medical</li>
-        <li>Transportation & Logistics</li>
-        <li>Manufacturing & Wholesale</li>
-        <li>Beauty & Salons</li>
-        <li>Automotive</li>
-        <li>Professional Services</li>
-    </ul>
+<section id="contact" class="section">
+<h2>Contact Us</h2>
+<p>Ready to get started? Connect with our funding specialists today.</p>
+<p>Email us at <a href="mailto:support@visacap.com">support@visacap.com</a> or fill out our brief application form.</p>
+<a href="mailto:support@visacap.com" class="btn-primary">Get In Touch</a>
 </section>
-
-<section class="testimonials">
-    <h2 class="section-title">What Our Clients Say</h2>
-    <div class="testimonial">
-        <p>"Visa Capital helped us secure the funds we needed quickly. The process was smooth, and the terms were flexible."</p>
-        <strong>— Jason T., Restaurant Owner</strong>
-    </div>
-    <div class="testimonial">
-        <p>"Great rates, fast funding, and excellent customer service. Highly recommend!"</p>
-        <strong>— Maria L., E-Commerce Business Owner</strong>
-    </div>
-    <div class="testimonial">
-        <p>"They provided the capital we needed to grow our business without the hassle of traditional banks."</p>
-        <strong>— David K., Construction Company Owner</strong>
-    </div>
-</section>
-
-<section class="contact" id="contact">
-    <h3>Get Started Today</h3>
-    <p>Fill out our simple application to get pre-qualified for funding. Our team will work with you to find the best solution for your business.</p>
-    <a href="mailto:info@visacapital.com" class="btn" style="background: #f4b400; color: #0b2340;">Contact Us</a>
-</section>
-
 <footer>
-    <p>&copy; 2026 Visa Capital. All rights reserved. | 123 Main Street, Toms River, NJ 08753</p>
+<p>&copy; 2026 Visa Capital. All rights reserved.</p>
+<p><a href="mailto:support@visacap.com">support@visacap.com</a></p>
 </footer>
-
 </body>
 </html>
