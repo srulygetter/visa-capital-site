@@ -1,0 +1,220 @@
+/* Common styles for all pages of the Visa Capital site */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background: #f5f7fa;
+  color: #0b2340;
+  line-height: 1.6;
+}
+
+a {
+  color: #0074d9;
+  text-decoration: none;
+}
+
+header {
+  background: #0b2340;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+header nav {
+  margin-top: 10px;
+}
+
+header nav a {
+  margin: 0 10px;
+  color: #f4b400;
+  font-weight: 600;
+}
+
+.hero {
+  padding: 80px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 6px;
+  background: #f4b400;
+  color: #0b2340;
+  font-weight: 700;
+  transition: background 0.2s ease;
+}
+
+.btn:hover {
+  background: #dba800;
+}
+
+.section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.stat {
+  flex: 1 1 200px;
+  background: #fefefe;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  text-align: center;
+}
+
+.stat h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #f4b400;
+}
+
+.stat p {
+  font-size: 1rem;
+  color: #333;
+}
+
+.solutions-list {
+  max-width: 900px;
+  margin: auto;
+}
+
+.solution {
+  margin-bottom: 20px;
+  text-align: left;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
+.solution summary {
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 1.3rem;
+}
+
+.solution summary::-webkit-details-marker {
+  display: none;
+}
+
+.step-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.step {
+  flex: 1 1 250px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.why-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.why {
+  flex: 1 1 250px;
+  background: #f5f7fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  padding: 20px;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.contact-form button {
+  padding: 12px 24px;
+  background: #f4b400;
+  color: #0b2340;
+  border: none;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #dba800;
+}
+
+footer {
+  background: #0b2340;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .stats, .step-container, .why-grid {
+    flex-direction: column;
+  }
+  .stat, .step, .why {
+    flex: 1 1 100%;
+  }
+  header nav a {
+    display: block;
+    margin: 5px 0;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
