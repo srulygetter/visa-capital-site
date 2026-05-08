@@ -1,4 +1,21 @@
-/* Common styles for all pages of the Visa Capital site */
+/* Global styles for the Visa Capital site (v2).  This stylesheet applies
+   consistent typography, spacing and color palette across all pages.
+   A responsive layout is provided using flexbox and media queries. On
+   narrower screens the navigation collapses into a hamburger menu and
+   multi‑column sections stack vertically for better readability. */
+
+/* CSS custom properties make it easy to tweak colours throughout the site */
+:root {
+  --primary-color: #0b2340;      /* dark blue for headings and backgrounds */
+  --accent-color: #f4b400;       /* warm gold for buttons and highlights */
+  --light-bg: #f5f7fa;           /* light grey background */
+  --card-bg: #ffffff;            /* white for cards */
+  --text-color: #0b2340;         /* dark blue for body text */
+  --muted-text: #555;            /* softer text colour */
+  --shadow: 0 4px 8px rgba(0,0,0,0.08);
+  --radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -7,9 +24,10 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, sans-serif;
-  background: #f5f7fa;
-  color: #0b2340;
+  background: var(--light-bg);
+  color: var(--text-color);
   line-height: 1.6;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -17,48 +35,75 @@ a {
   text-decoration: none;
 }
 
+/* Header and navigation */
 header {
-  background: #0b2340;
+  background: var(--primary-color);
   color: #fff;
   padding: 20px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-header nav {
-  margin-top: 10px;
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
-header nav a {
-  margin: 0 10px;
-  color: #f4b400;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: var(--accent-color);
   font-weight: 600;
+  padding: 8px 10px;
+  transition: color 0.2s ease;
 }
 
+nav ul li a:hover {
+  color: #fff;
+}
+
+/* Hamburger button for mobile */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--accent-color);
+  cursor: pointer;
+}
+
+/* Hero section */
 .hero {
   padding: 80px 20px;
   text-align: center;
-  background: #fff;
+  background: var(--card-bg);
 }
 
 .hero h2 {
   font-size: 2.5rem;
   margin-bottom: 15px;
+  color: var(--primary-color);
 }
 
 .hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+  font-size: 1.25rem;
   max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 25px;
+  color: var(--muted-text);
 }
 
 .btn {
   display: inline-block;
-  padding: 12px 24px;
-  border-radius: 6px;
-  background: #f4b400;
-  color: #0b2340;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  background: var(--accent-color);
+  color: var(--primary-color);
   font-weight: 700;
   transition: background 0.2s ease;
 }
@@ -67,40 +112,42 @@ header nav a {
   background: #dba800;
 }
 
+/* Generic section wrapper */
 .section {
   padding: 60px 20px;
   text-align: center;
 }
 
+/* Stats cards */
 .stats {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  background: #fff;
-  padding: 60px 20px;
+  padding: 40px 0;
 }
 
 .stat {
   flex: 1 1 200px;
-  background: #fefefe;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 20px;
   text-align: center;
 }
 
 .stat h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 10px;
-  color: #f4b400;
+  color: var(--accent-color);
 }
 
 .stat p {
   font-size: 1rem;
-  color: #333;
+  color: var(--muted-text);
 }
 
+/* Solutions list (using details for interactive accordion) */
 .solutions-list {
   max-width: 900px;
   margin: auto;
@@ -109,22 +156,32 @@ header nav a {
 .solution {
   margin-bottom: 20px;
   text-align: left;
-  background: #fff;
-  border-radius: 8px;
+  background: var(--card-bg);
+  border-radius: var(--radius);
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow);
 }
 
 .solution summary {
   font-weight: 700;
   cursor: pointer;
   font-size: 1.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
 }
 
 .solution summary::-webkit-details-marker {
   display: none;
 }
 
+.solution p {
+  margin-top: 10px;
+  color: var(--muted-text);
+}
+
+/* Steps container for How it Works */
 .step-container {
   display: flex;
   flex-wrap: wrap;
@@ -134,36 +191,86 @@ header nav a {
 
 .step {
   flex: 1 1 250px;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 20px;
+  position: relative;
 }
 
+.step-number {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+/* Why Us grid */
 .why-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
 }
 
 .why {
   flex: 1 1 250px;
-  background: #f5f7fa;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.06);
+  background: var(--light-bg);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 20px;
+  text-align: left;
 }
 
+.why h3 {
+  margin-bottom: 10px;
+  color: var(--accent-color);
+}
+
+.why p {
+  color: var(--muted-text);
+}
+
+/* Requirements list */
+.requirements-list {
+  list-style: none;
+  max-width: 500px;
+  margin: 20px auto;
+  text-align: left;
+}
+
+.requirements-list li {
+  margin-bottom: 10px;
+  padding-left: 25px;
+  position: relative;
+}
+
+.requirements-list li::before {
+  content: '\2713';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+/* Contact form */
 .contact-form {
   max-width: 600px;
   margin: auto;
-  background: #fff;
+  background: var(--card-bg);
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   text-align: left;
 }
 
@@ -184,8 +291,8 @@ header nav a {
 
 .contact-form button {
   padding: 12px 24px;
-  background: #f4b400;
-  color: #0b2340;
+  background: var(--accent-color);
+  color: var(--primary-color);
   border: none;
   border-radius: 6px;
   font-weight: 700;
@@ -196,25 +303,49 @@ header nav a {
   background: #dba800;
 }
 
+/* Footer */
 footer {
-  background: #0b2340;
+  background: var(--primary-color);
   color: #fff;
   padding: 20px;
   text-align: center;
+  margin-top: 40px;
 }
 
+footer a {
+  color: var(--accent-color);
+}
+
+/* Media query for devices 768px and below */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--primary-color);
+    display: none;
+    margin-top: 10px;
+    padding: 10px 0;
+  }
+  nav ul.active {
+    display: flex;
+  }
+  nav ul li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
   .stats, .step-container, .why-grid {
     flex-direction: column;
   }
   .stat, .step, .why {
     flex: 1 1 100%;
-  }
-  header nav a {
-    display: block;
-    margin: 5px 0;
-  }
-  .hero h2 {
-    font-size: 2rem;
   }
 }
