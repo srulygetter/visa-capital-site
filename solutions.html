@@ -1,63 +1,285 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Financing Solutions – Visa Capital</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Compare Visa Capital's funding solutions: Merchant Cash Advance, Line of Credit, Term Loans, Equipment Financing, and SBA Loans. From $5K to $5M." />
+  <title>Funding Solutions — Visa Capital</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
-    <header>
-        <h1>Visa Capital</h1>
-        <button class="menu-toggle" aria-label="Toggle navigation">&#9776;</button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="solutions.html">Solutions</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="why-us.html">Why Us</a></li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="requirements.html">Requirements</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="section">
-            <h2>Funding Solutions Tailored to Your Business</h2>
-            <p>Select the product that best matches your business needs. Each option offers different benefits in terms of speed, flexibility and cost.</p>
-            <div class="solutions-list">
-                <details class="solution">
-                    <summary>Merchant Cash Advance</summary>
-                    <p>Ideal for businesses with high credit card sales. Receive a lump sum of working capital and repay through a small percentage of your future card transactions. Funding from $5K up to $400K with fast approval and flexible repayments based on your daily sales.</p>
-                </details>
-                <details class="solution">
-                    <summary>Business Line of Credit</summary>
-                    <p>Access a revolving credit line you can draw on as needed. Borrow only what you need and pay interest only on what you use. Limits from $6K to $200K with terms up to 24 months. Perfect for managing cash flow, purchasing inventory or handling unexpected expenses.</p>
-                </details>
-                <details class="solution">
-                    <summary>Term Loans</summary>
-                    <p>Borrow a lump sum for a specific project or investment with predictable monthly payments. Loan amounts from $5K to $500K and repayment terms up to 36 months. Use for renovations, expansions, marketing campaigns or any large purchase requiring stability and fixed payments.</p>
-                </details>
-                <details class="solution">
-                    <summary>Equipment Financing</summary>
-                    <p>Preserve your cash by financing up to 100% of the equipment value. Loans from $10K to $150K with terms aligned to the useful life of the asset. Ideal for machinery, vehicles, technology or other equipment you need to operate and grow.</p>
-                </details>
-                <details class="solution">
-                    <summary>SBA Loans</summary>
-                    <p>Leverage government‑backed Small Business Administration (SBA) programs to secure favourable rates and longer terms. Funding up to $5M with low down payments. Best for major expansions, real estate purchases or refinancing existing debt.</p>
-                </details>
-            </div>
-            <p style="margin-top:30px;">Not sure which option suits you? Talk to one of our funding specialists.</p>
-            <a href="contact.html" class="btn">Speak to an Expert</a>
-        </section>
-    </main>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="index.html" class="brand">
+        <span class="brand-mark">VC</span>
+        <span>Visa Capital</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="solutions.html">Solutions</a>
+        <a href="how-it-works.html">How It Works</a>
+        <a href="why-us.html">Why Us</a>
+        <a href="industries.html">Industries</a>
+        <a href="requirements.html">Requirements</a>
+        <a href="contact.html" class="btn btn-primary nav-cta">Apply Now</a>
+      </nav>
+    </div>
+  </header>
 
-    <footer>
-        <p>&copy; 2026 Visa Capital. All rights reserved. <a href="mailto:support@visacap.com">support@visacap.com</a></p>
-    </footer>
+  <section class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Solutions</span></div>
+      <h1>Funding solutions tailored to your business.</h1>
+      <p>Five distinct products, one process. Browse below or talk to a specialist who'll match you to the option that fits your goals — fast.</p>
+    </div>
+  </section>
 
-    <script src="scripts.js"></script>
+  <!-- Comparison table -->
+  <section class="tight">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom:24px;">
+        <span class="eyebrow">At a glance</span>
+        <h2>Compare every product side by side.</h2>
+      </div>
+
+      <div style="overflow-x:auto;">
+        <table class="compare-table reveal">
+          <thead>
+            <tr>
+              <th>Product</th>
+              <th>Amount</th>
+              <th>Term</th>
+              <th>Speed</th>
+              <th>Best for</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Merchant Cash Advance</td>
+              <td>$5K – $400K</td>
+              <td>3 – 18 months</td>
+              <td><span class="pill">24 hours</span></td>
+              <td>Card-volume businesses needing fast cash</td>
+            </tr>
+            <tr>
+              <td>Business Line of Credit</td>
+              <td>$6K – $200K</td>
+              <td>Up to 24 months</td>
+              <td><span class="pill">24-48 hours</span></td>
+              <td>Ongoing cash-flow flexibility</td>
+            </tr>
+            <tr>
+              <td>Term Loan</td>
+              <td>$5K – $500K</td>
+              <td>Up to 36 months</td>
+              <td><span class="pill">48 hours</span></td>
+              <td>Specific projects with fixed payments</td>
+            </tr>
+            <tr>
+              <td>Equipment Financing</td>
+              <td>$10K – $150K</td>
+              <td>Aligned to asset life</td>
+              <td><span class="pill">48 hours</span></td>
+              <td>Vehicles, machinery, technology</td>
+            </tr>
+            <tr>
+              <td>SBA Loan</td>
+              <td>Up to $5M</td>
+              <td>Up to 25 years</td>
+              <td><span class="pill">2-6 weeks</span></td>
+              <td>Major expansions, real estate, refinance</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solution rows -->
+  <section class="section-alt">
+    <div class="container">
+
+      <!-- MCA -->
+      <div class="solution-row reveal" id="mca">
+        <div class="visual">
+          <span class="tag">Most Popular</span>
+          <h3>Merchant Cash Advance</h3>
+          <p>Built for businesses with steady credit-card sales. Convert future revenue into capital today, repay through a small slice of daily transactions.</p>
+          <div class="big-num">$5K – $400K</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.6);">funding range · same-day decisions</div>
+        </div>
+        <div>
+          <h2>Cash today, repay as you sell.</h2>
+          <p>Receive a lump sum of working capital and repay through an automatic, small percentage of your future card transactions. Slow week? You pay less. Strong week? You pay it down faster. The repayment matches your business rhythm — no fixed monthly burden.</p>
+          <div class="meta-list">
+            <div><div class="k">Amount</div><div class="v">$5,000 – $400,000</div></div>
+            <div><div class="k">Speed</div><div class="v">24 hours</div></div>
+            <div><div class="k">Repayment</div><div class="v">% of daily sales</div></div>
+            <div><div class="k">Best for</div><div class="v">Restaurants, retail, salons</div></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Apply for an MCA →</a>
+        </div>
+      </div>
+
+      <!-- LOC -->
+      <div class="solution-row reveal" id="loc">
+        <div class="visual" style="background:linear-gradient(135deg,#0A1F44,#1E3A75);">
+          <span class="tag">Most Flexible</span>
+          <h3>Business Line of Credit</h3>
+          <p>A revolving credit line you can draw on whenever you need it. Pay interest only on what you use, and replenish as you repay.</p>
+          <div class="big-num">$6K – $200K</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.6);">credit limit · pay only on what you use</div>
+        </div>
+        <div>
+          <h2>Capital on standby, ready when you are.</h2>
+          <p>Get approved once, draw funds whenever opportunity (or trouble) shows up. Perfect for managing cash flow gaps, jumping on inventory deals, or covering payroll between large invoices. You only pay interest on the portion you actually use.</p>
+          <div class="meta-list">
+            <div><div class="k">Limit</div><div class="v">$6,000 – $200,000</div></div>
+            <div><div class="k">Term</div><div class="v">Up to 24 months</div></div>
+            <div><div class="k">Interest</div><div class="v">Only on what you draw</div></div>
+            <div><div class="k">Best for</div><div class="v">Cash-flow management, inventory</div></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Open a line of credit →</a>
+        </div>
+      </div>
+
+      <!-- Term -->
+      <div class="solution-row reveal" id="term">
+        <div class="visual">
+          <span class="tag">Predictable</span>
+          <h3>Term Loans</h3>
+          <p>Lump-sum financing with fixed monthly payments. Plan with certainty, budget without surprises.</p>
+          <div class="big-num">$5K – $500K</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.6);">fixed payments · up to 36 months</div>
+        </div>
+        <div>
+          <h2>One payment. One due date. One plan.</h2>
+          <p>Borrow a lump sum and pay it back in equal monthly installments — no rate surprises, no balloon payments, no guesswork. Ideal for renovations, marketing pushes, hiring sprints, or any large purchase where you want stability over flexibility.</p>
+          <div class="meta-list">
+            <div><div class="k">Amount</div><div class="v">$5,000 – $500,000</div></div>
+            <div><div class="k">Term</div><div class="v">Up to 36 months</div></div>
+            <div><div class="k">Payments</div><div class="v">Fixed monthly</div></div>
+            <div><div class="k">Best for</div><div class="v">Renovations, marketing, expansion</div></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Apply for a term loan →</a>
+        </div>
+      </div>
+
+      <!-- Equipment -->
+      <div class="solution-row reveal" id="equipment">
+        <div class="visual" style="background:linear-gradient(135deg,#0A1F44,#1E3A75);">
+          <span class="tag">Asset-Backed</span>
+          <h3>Equipment Financing</h3>
+          <p>Finance up to 100% of equipment value. The asset secures the loan, so terms align to its useful life.</p>
+          <div class="big-num">$10K – $150K</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.6);">100% financing available · 48-hr funding</div>
+        </div>
+        <div>
+          <h2>Buy what you need without draining cash.</h2>
+          <p>Whether it's a new oven, a service truck, dental imaging gear, or a fleet of laptops — finance it instead of buying outright. Preserve your working capital for operations and growth, and let the equipment pay for itself as it generates revenue.</p>
+          <div class="meta-list">
+            <div><div class="k">Amount</div><div class="v">$10,000 – $150,000</div></div>
+            <div><div class="k">Coverage</div><div class="v">Up to 100% of value</div></div>
+            <div><div class="k">Speed</div><div class="v">48 hours</div></div>
+            <div><div class="k">Best for</div><div class="v">Vehicles, machinery, tech</div></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Finance equipment →</a>
+        </div>
+      </div>
+
+      <!-- SBA -->
+      <div class="solution-row reveal" id="sba">
+        <div class="visual">
+          <span class="tag">Best Rates</span>
+          <h3>SBA Loans</h3>
+          <p>Government-backed financing with the longest terms and lowest rates. The premier option for major moves.</p>
+          <div class="big-num">Up to $5M</div>
+          <div style="font-size:0.84rem;color:rgba(255,255,255,0.6);">terms up to 25 years · low down payments</div>
+        </div>
+        <div>
+          <h2>The most patient capital we offer.</h2>
+          <p>Backed by the U.S. Small Business Administration, SBA loans deliver the longest terms and most favorable rates in our lineup. Best suited for major expansions, real estate purchases, business acquisitions, or refinancing higher-cost debt into a comfortable monthly payment.</p>
+          <div class="meta-list">
+            <div><div class="k">Amount</div><div class="v">Up to $5,000,000</div></div>
+            <div><div class="k">Term</div><div class="v">Up to 25 years</div></div>
+            <div><div class="k">Rates</div><div class="v">Lowest in our lineup</div></div>
+            <div><div class="k">Best for</div><div class="v">Real estate, acquisitions, refi</div></div>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Explore SBA options →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA banner -->
+  <section style="padding-bottom:80px;">
+    <div class="container">
+      <div class="cta-banner reveal">
+        <div>
+          <h2>Not sure which product fits?</h2>
+          <p>Tell us about your business in five minutes. A specialist will recommend the right product — at no cost or obligation.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="contact.html" class="btn btn-primary btn-lg btn-arrow">Get matched</a>
+          <a href="how-it-works.html" class="btn btn-ghost btn-lg">See process</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand">
+            <span class="brand-mark">VC</span>
+            <span style="color:#fff;">Visa Capital</span>
+          </a>
+          <p>Fast, transparent business funding for growing companies across the United States.</p>
+        </div>
+        <div>
+          <h5>Solutions</h5>
+          <ul>
+            <li><a href="solutions.html#mca">Merchant Cash Advance</a></li>
+            <li><a href="solutions.html#loc">Line of Credit</a></li>
+            <li><a href="solutions.html#term">Term Loans</a></li>
+            <li><a href="solutions.html#equipment">Equipment Financing</a></li>
+            <li><a href="solutions.html#sba">SBA Loans</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Company</h5>
+          <ul>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="why-us.html">Why Us</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="requirements.html">Requirements</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5>Get In Touch</h5>
+          <ul>
+            <li><a href="mailto:support@visacap.com">support@visacap.com</a></li>
+            <li><a href="contact.html">Apply for funding</a></li>
+            <li><a href="contact.html">Speak to a specialist</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Visa Capital. All rights reserved.</span>
+        <span>Funding subject to underwriting approval. Rates and terms vary.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
